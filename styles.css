@@ -25,6 +25,121 @@ body {
     list-style: none;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        margin: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        padding: 2rem 1rem;
+        background-color: rgba(255, 222, 189, 0.9);
+        border-radius: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+    }
+    
+    .nav-links a {
+        padding: 1rem;
+        font-size: 1.2rem;
+        min-width: 100%;
+        text-align: left;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s ease;
+    }
+    
+    .nav-links a:hover {
+        background-color: rgba(255, 127, 80, 0.1);
+    }
+    
+    /* Single column layout */
+    .hero, .about-content, .tools-grid, .works-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    /* Responsive units */
+    .intro-card {
+        width: 90% !important;
+        margin: 0 auto 2rem !important;
+        padding: 1.5rem;
+    }
+    
+    /* Hero section */
+    .hero-content h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    
+    /* Project cards */
+    .work-card {
+        margin-bottom: 2rem;
+    }
+    
+    /* About section */
+    .about-text p {
+        padding: 1.5rem;
+    }
+    
+    /* Contact form */
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Image scaling */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Button sizing */
+    .btn, .view-design button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Padding adjustments */
+    main {
+        padding: 1rem;
+    }
+}
+
 .nav-links a {
     text-decoration: none;
     color: #1a1a1a;
