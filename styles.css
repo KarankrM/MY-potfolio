@@ -649,6 +649,9 @@ main {
     .contact-right{
         display: none;
     }
+    .btn.primary{
+        padding-left: 5px;
+    }
 }
 .btn.primary, .btn.secondary {
     display: flex;
